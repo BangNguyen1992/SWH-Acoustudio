@@ -1,4 +1,5 @@
 import angular from "angular";
+import angularMaterialize from 'angular-materialize';
 import "angular-ui-router";
 import "angular-ui-bootstrap";
 import "./js/controllers";
@@ -16,7 +17,8 @@ var app = angular.module("Acoustudio", [
   "filtersModule",
   "modelModule",
   "ui.router",
-  "ui.bootstrap"
+  "ui.bootstrap",
+  'ui.materialize'
 ]);
 
 app.config(function($stateProvider, $urlRouterProvider) {

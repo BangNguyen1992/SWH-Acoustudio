@@ -9,7 +9,10 @@ module.exports = {
   },
   watch: true,
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      'window.jQuery': 'jquery'
+    })
   ],
   module: {
     loaders: [{
