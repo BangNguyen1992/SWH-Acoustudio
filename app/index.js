@@ -1,5 +1,7 @@
 import angular from "angular";
-import angularMaterialize from 'angular-materialize';
+import $ from "jquery";
+import "materialize-css";
+import "angular-materialize";
 import "angular-ui-router";
 import "angular-ui-bootstrap";
 import "./js/controllers";
