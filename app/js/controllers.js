@@ -1,7 +1,12 @@
 'use strict';
-
+import Recorder from "Recorder";
 /* Controllers */
 var module = angular.module("controllersModule", []);
 
-// module
-//   .controller("AuthModalCtrl", AuthModalCtrl);
+module
+  .controller("RecordPageCtrl", RecordPageCtrl);
+
+
+function RecordPageCtrl($scope){
+	
+}

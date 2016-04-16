@@ -19,12 +19,21 @@ module.exports = {
       query: {
         presets: ['es2015']
       }
+    },
+    {
+      // Rewrite the file so that it exports the window global.
+      test: __dirname + '/node_modules/recorderjs/src/recorder.js',
+      loader: 'babel'
     }]
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.css'],
     modulesDirectories: [
       'node_modules'
-    ]
+    ],
+    alias: {
+      // Make it so that 'require' finds the right file.
+      "Recorder": __dirname+"/node_modules/recorderjs/src/recorder.js"
+    }
   }
 };

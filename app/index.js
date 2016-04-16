@@ -20,4 +20,19 @@ var app = angular.module("Acoustudio", [
 ]);
 
 app.config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise("/recordPage");
+
+  $stateProvider
+    // .state("app", {
+    //   abstract: true,
+    //   templateUrl: "app/views/app.html",
+    //   controller: "RootCtrl",
+    //   resolve: {
+    //     session: "sessionPromise"
+    //   }
+    // })
+    .state("recordPage", {
+      templateUrl: "app/views/recordPage.html",
+      controller: "RecordPageCtrl"
+    });
 });
