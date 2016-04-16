@@ -24,13 +24,21 @@ module.exports = {
           presets: ['es2015']
         }
       },
-      { test: /\.css$/, loader: "style-loader!css-loader" }
+      { test: /\.css$/, loader: "style-loader!css-loader" }, 
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        loader: 'file-loader'
+      }
     ]
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.css'],
     modulesDirectories: [
       'node_modules'
-    ]
+    ],
+    alias: {
+      // Make it so that 'require' finds the right file.
+      "materialize-css-file": __dirname + "/node_modules/materialize-css/dist/css/materialize.css"
+    }
   }
 };
