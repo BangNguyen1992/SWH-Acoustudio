@@ -44,9 +44,9 @@ module.exports = {
     alias: {
       // Make it so that 'require' finds the right file.
       "materialize-css-file": __dirname + "/node_modules/materialize-css/dist/css/materialize.css",
-      "angular-recorder": __dirname + "/bower_components/angularAudioRecorder/dist/angular-audio-recorder.js",
-      "wavesurfer": __dirname + "/bower_components/wavesurfer.js/dist/wavesurfer.min.js",
-      "recorder-flash": __dirname + "/bower_components/angularAudioRecorder/lib/recorder.swf",
+      "angular-recorder": __dirname + "/app/lib/angular-audio-recorder.js",
+      "wavesurfer": __dirname + "/app/lib/wavesurfer.min.js",
+      "recorder-flash": __dirname + "/app/lib/recorder.swf",
     }
   }
 };

@@ -10,6 +10,7 @@ function RecordPageCtrl($scope, $window, Record) {
   vm.saveToServer = saveToServer;
 
   function saveToServer(blobUrl) {
+    console.log("in save", blobUrl);
     var base64 = blobUrl.split(',')[1];
     var recordObject = {
       "song": {

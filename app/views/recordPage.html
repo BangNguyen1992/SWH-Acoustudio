@@ -39,7 +39,7 @@
                 <button class="btn btn-success" ng-click="recorder.save()" ng-disabled="recorder.status.isRecording || !recorder.audioModel">
                   <i class="glyphicon glyphicon-download"></i> Download
                 </button>
-                <button class="btn btn-success" ng-click="recorder.saveToServer(recorder.blob)">
+                <button class="btn btn-success" ng-click="recorder.saveToServer(recorder.blobUrl)">
                   <i class="glyphicon glyphicon-download"></i> Save
                 </button>
               </div>
