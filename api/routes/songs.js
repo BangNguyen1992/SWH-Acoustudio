@@ -10,12 +10,31 @@ router.get('/',(req,res)=>{
 
 router.post('/',(req,res)=>{
   console.log("post song ",req.user);
-  var s = new Song({
+  var s;
+  if(req.body.blob){
+    var path ="storage/blob"+ '-' + Date.now()+".wav";
+    var buf = new Buffer(req.body.blob, 'base64'); // decode
+    fs.writeFile(path, buf, function(err) {
+      if(err) {
+        console.log("err", err);
+      } else {
+        s = new Song({
+          owner:req.user,
+          path:path,
+          catergory:req.body.song.category,
+          description:req.body.song.description
+        });
+      }
+    });
+  }else{
+    s = new Song({
       owner:req.user,
       path:"",
       catergory:req.body.song.category,
       description:req.body.song.description
-  });
+    });
+  }
+
   s.save().then((song)=>{
     res.json({
       message:'saved!',
