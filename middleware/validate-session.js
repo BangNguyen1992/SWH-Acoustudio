@@ -20,7 +20,7 @@ module.exports=(req,res,next)=>{
         res.send(401,"not authorized");
       }
     });
-  }else if(req.body.user|| req.url=='/app/index.html' || req.url=='/') {
+  }else if(req.body.user|| req.url=='/app/index.html' || req.url=='/'||req.isAuthenticated()||req.url=='/facebook/login') {
     next();
   }else{
     res.send(401,"not authorized");

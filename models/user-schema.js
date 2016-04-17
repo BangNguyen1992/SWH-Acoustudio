@@ -1,10 +1,10 @@
 var db = require('../config/db.js');
 
 var UserSchema = db.Schema({
-  facebookId:{type:String},
   username :{type:String,required:true},
   email :{type:String,required :true},
   passhash:{type:String,required:true},
-  created:{type:Date,default:Date.now}
+  created:{type:Date,default:Date.now},
+  facebook:{id:String,token:String,name:String,email:String}
 });
 module.exports=UserSchema;

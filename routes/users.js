@@ -6,7 +6,6 @@ var constants = require('../config/constants');
 
 router.post('/',(req,res)=>{
   var user = new User({
-      facebookId:"",
       username:req.body.user.username,
       email: req.body.user.email,
       passhash:bcrypt.hashSync(req.body.user.pwd,10)
