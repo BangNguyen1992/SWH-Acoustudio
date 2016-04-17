@@ -50,9 +50,15 @@ router.post('/',(req,res)=>{
 router.put('/:id',(req,res)=>{
   Song.findOne({_id:req.params.id,owner:req.user})
   .then((song)=>{
-    song.category=req.body.song.category;
+    if(req.body.song.name)
+    song.name=req.body.song.name
+    if(req.body.song.artist)
+    song.artist=req.body.song.name
     if(req.body.song.lyric)
-    song.lyric=req.body.song.lyric;
+    song.lyric=req.body.song.lyric
+    if(req.body.song.category)
+    song.category=req.body.song.category;
+    if(req.body.song.description)
     song.description=req.body.song.description;
     song.save().then((song)=>{
       res.json({
