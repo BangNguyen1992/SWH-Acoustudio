@@ -47,6 +47,8 @@ router.put('/:id',(req,res)=>{
   Song.findOne({_id:req.params.id,owner:req.user})
   .then((song)=>{
     song.category=req.body.song.category;
+    if(req.body.song.lyric)
+    song.lyric=req.body.song.lyric;
     song.description=req.body.song.description;
     song.save().then((song)=>{
       res.json({

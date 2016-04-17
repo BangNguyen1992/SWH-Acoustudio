@@ -3,6 +3,7 @@ var SongSchema = db.Schema({
   category:String,
   description:String,
   path:String,
+  lyric:String,
   owner:{type:db.SchemaTypes.ObjectId,ref:'User'}
 });
 
