@@ -5,7 +5,8 @@ var module = angular.module("controllersModule", []);
 module
   .controller("RecordPageCtrl", RecordPageCtrl)
   .controller("UploadFileCtrl", UploadFileCtrl)
-  .controller("CombineRecordCtrl", CombineRecordCtrl);
+  .controller("CombineRecordCtrl", CombineRecordCtrl)
+  .controller("AudioPlayerCtrl", AudioPlayerCtrl);
 
 function RecordPageCtrl($scope, $window, Record) {
   var vm = this;
@@ -44,7 +45,7 @@ function CombineRecordCtrl($scope, $window, Record, $stateParams) {
     };
     Record.save(recordObject, function(res) {
       console.log(res);
-      if(!res.song._id){
+      if (!res.song._id) {
         alert("Song not saved!");
         return;
       }
@@ -52,9 +53,9 @@ function CombineRecordCtrl($scope, $window, Record, $stateParams) {
         instrument: res.song._id,
         vocal: songId,
         description: "Great22"
-      }, function(res){
+      }, function(res) {
         console.log(res);
-      }, function(err){
+      }, function(err) {
         console.log(res);
       })
     }, function(err) {
@@ -88,5 +89,17 @@ function UploadFileCtrl($scope, Record) {
       var progressPercentage = parseInt(100.0 * evt.loaded / evt.total);
       console.log('progress: ' + progressPercentage + '% ' + evt.config.data.file.name);
     });
+  };
+}
+
+function AudioPlayerCtrl($scope, $sce) {
+  $scope.config = {
+    sources: [
+      { src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/audios/videogular.mp3"), type: "audio/mpeg" },
+      { src: $sce.trustAsResourceUrl("http://static.videogular.com/assets/audios/videogular.ogg"), type: "audio/ogg" }
+    ],
+    theme: {
+      url: "http://www.videogular.com/styles/themes/default/latest/videogular.css"
+    }
   };
 }
