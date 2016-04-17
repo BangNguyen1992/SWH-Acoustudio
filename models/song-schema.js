@@ -1,5 +1,7 @@
 var db =require('../config/db');
 var SongSchema = db.Schema({
+  name:String,
+  artist:String,
   category:String,
   description:String,
   path:String,

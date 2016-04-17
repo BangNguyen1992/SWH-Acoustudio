@@ -21,6 +21,8 @@ router.post('/',(req,res)=>{
         s = new Song({
           owner:req.user,
           path:path,
+          name:req.body.song.name,
+          artist:req.body.song.artist,
           catergory:req.body.song.category,
           description:req.body.song.description
         });
@@ -30,6 +32,8 @@ router.post('/',(req,res)=>{
     s = new Song({
       owner:req.user,
       path:"",
+      name:req.body.song.name,
+      artist:req.body.song.artist,
       catergory:req.body.song.category,
       description:req.body.song.description
     });
