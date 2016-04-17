@@ -9,6 +9,13 @@ function Record($resource, DEFAULT_ROOT_PATH) {
     save: {
       method: "POST",
       headers: { 'Authorization': 'eyJhbGciOiJIUzI1NiJ9.NTcxMWUwN2Y4MzM1OWZjMzBlZmQ1Y2Rm.a1dKaruM0m-Q8qhQjzT1hVR1xJiglO6FIvPkyFzlOWA' }
+    },
+    getList: {
+      method: "GET"
+    },
+    combine: {
+      method: "POST",
+      url: DEFAULT_ROOT_PATH + "/api/combine"
     }
   });
   return model;

@@ -7,9 +7,9 @@ import "angular-ui-bootstrap";
 import "angular-recorder";
 import "ng-file-upload";
 import "./js/controllers";
+import "./js/model";
 import "./js/directives";
 import "./js/filters";
-import "./js/model";
 import "./js/services";
 import recorderFlash from "recorder-flash";
 
@@ -56,5 +56,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/uploadFile",
       templateUrl: "/views/uploadFile.html",
       controller: "UploadFileCtrl"
+    })
+    .state("combineRecord", {
+      url: "/recordPage/:songId",
+      templateUrl: "/views/combineRecord.html",
+      controller: "CombineRecordCtrl"
     });
 });
