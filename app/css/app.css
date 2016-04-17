@@ -1,1 +1,60 @@
-/* app css stylesheet */
+.icon-list li a{
+
+	display: block
+}
+
+
+.main-container-items{
+
+	margin-bottom: 2%;
+	margin-left: 2%;
+	padding-left: 0px;
+	padding-right: 0px;
+	height: 83px;
+}
+
+nav .brand-logo.center {
+
+	height: inherit;
+	display: flex;
+	align-items: center;
+
+
+}
+
+.brand-logo img {
+
+	max-height: 70%;
+
+}
+
+
+.main-container{
+
+	margin-top: 5%;
+
+}
+
+
+.item-info{
+
+	color: white;
+
+	height: 83px;
+	background-color: black;
+}
+
+.aligner{
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.item-btn{
+
+	height: 83px;
+	
+}
