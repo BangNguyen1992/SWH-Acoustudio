@@ -7,9 +7,9 @@ import "angular-ui-bootstrap";
 import "angular-recorder";
 import "ng-file-upload";
 import "./js/controllers";
+import "./js/model";
 import "./js/directives";
 import "./js/filters";
-import "./js/model";
 import "./js/services";
 import recorderFlash from "recorder-flash";
 

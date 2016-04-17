@@ -1,2 +1,9 @@
 node_modules
 bower_components
+storage
+build
+bundle.js
+*.woff
+*.eot
+*.woff2
+*.tff
