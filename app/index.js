@@ -5,6 +5,7 @@ import "angular-materialize";
 import "angular-ui-router";
 import "angular-ui-bootstrap";
 import "angular-recorder";
+import "ng-file-upload";
 import "./js/controllers";
 import "./js/directives";
 import "./js/filters";
@@ -23,7 +24,8 @@ var app = angular.module("Acoustudio", [
   "ui.router",
   "ui.bootstrap",
   'ui.materialize',
-  'angularAudioRecorder'
+  'angularAudioRecorder',
+  "ngFileUpload"
 ]);
 app.config(function(recorderServiceProvider) {
   recorderServiceProvider
@@ -45,9 +47,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
   //   }
   // })
     .state("recordPage", {
-    url: "/recordPage",
-    templateUrl: "/views/recordPage.html",
-    controller: "RecordPageCtrl",
-    controllerAs:"vm"
-  });
+      url: "/recordPage",
+      templateUrl: "/views/recordPage.html",
+      controller: "RecordPageCtrl",
+      controllerAs: "vm"
+    })
+    .state("uploadFile", {
+      url: "/uploadFile",
+      templateUrl: "/views/uploadFile.html",
+      controller: "UploadFileCtrl"
+    });
 });

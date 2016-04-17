@@ -45,7 +45,7 @@ module.exports = {
       // Make it so that 'require' finds the right file.
       "materialize-css-file": __dirname + "/node_modules/materialize-css/dist/css/materialize.css",
       "angular-recorder": __dirname + "/app/lib/angular-audio-recorder.js",
-      "wavesurfer": __dirname + "/app/lib/wavesurfer.min.js",
+      "wavesurfer": __dirname + "/node_modules/wavesurfer.js/dist/wavesurfer.min.js",
       "recorder-flash": __dirname + "/app/lib/recorder.swf",
     }
   }

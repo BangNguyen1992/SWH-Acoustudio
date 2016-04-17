@@ -1,0 +1,8 @@
+Upload on form submit or button click
+<form name="form">
+  Single Audio
+  <button ngf-select ng-model="file" name="file" ngf-pattern="'audio/*'" ngf-accept="'audio/*'" ngf-max-size="20MB" ngf-min-height="100" ngf-resize="{width: 100, height: 100}">Select</button>
+  <button type="submit" ng-click="submit()">submit</button>
+</form>
+Audio preview:
+<audio controls ngf-src="file"></audio>
