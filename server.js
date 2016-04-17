@@ -7,7 +7,7 @@ app.use("/",express.static(__dirname + '/app/'));
 
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '50mb'}));
 app.use(require('./middleware/headers'));
 app.use(require('./middleware/validate-session'));
 app.use('/facebook',require('./routes/oauth'));
