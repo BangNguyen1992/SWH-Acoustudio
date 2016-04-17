@@ -9,6 +9,7 @@
   <meta name="author" content="">
   <link rel="stylesheet" href="/css/app.css" />
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Customized styles -->
 </head>
 
@@ -20,6 +21,259 @@
   <div ui-view=""></div>
   <!--   Finally load libraries -->
   <script src="bundle.js"></script>
-</body>
+  <nav class="navbar-fixed">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="left">
+        <li>
+          <a class="waves-effect">
+            <i class="material-icons" data-activates="nav1" data-sidenav="right" data-menuwidth="300" data-closeonclick="true">menu</i>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="brand-logo center">
+        <img src="images/logoweb.png">
+      </a>
+      <ul id="nav-mobile" class="right">
+        <li>
+          <a class="waves-effect dropdown-button" data-activates='searchbar' data-beloworigin="true" data-alignment="right">
+            <i class="material-icons">search</i>
+          </a>
+          <ul id='searchbar' class='dropdown-content'>
+            <li>
+              <input placeholder="Search" id="first_name" type="text">
+    </div>
+    </li>
+    </ul>
+    </li>
+    </ul>
+    </div>
+  </nav>
+  <!-- Side nav -->
+  <ul id="nav1" class="side-nav" style="transform: translateX(-100%);">
+    <div class="container">
+      <li class="side-menu-item-top">
+        <a class="waves-effect" href='#demoUpload' modal>
+          Upload
+        </a>
+      </li>
+      <li class="side-menu-item-top">
+        <a class="waves-effect">
+          Record
+        </a>
+      </li>
+      <div class="divider"></div>
+      <li class="side-menu-item-top">
+        <a class="waves-effect">
+          Discover
+        </a>
+      </li>
+      <li class="side-menu-item-top">
+        <a class="waves-effect">
+          Ranking
+        </a>
+      </li>
+      <div class="divider"></div>
+      <li class="side-menu-item-top">
+        <a class="waves-effect" href='#demoModal' modal>
+          Sign in
+        </a>
+      </li>
+      <li class="side-menu-item-top">
+        <a class="waves-effect">
+          Register
+        </a>
+      </li>
+    </div>
+  </ul>
+  <!-- Login -->
+  <div id="demoModal" class="modal">
+    <div class="container">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s12 center">
+            <h5>Sign in</h5>
+            <form class="login-form">
+              <input class="text-field" type="text" placeholder="Username">
+              <input class="text-field" type="password" placeholder="Password">
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>
+            </form>
+            <h5>Or login with</h5>
+            <span>
+              <a>
+                <img src="/images/g.png" style="width: 50px;">
+              </a>
+            </span>
+            <span>
+              <a>
+                <img src="/images/f.png" style="width: 50px;">
+              </a>
+            </span>
+            <span>
+              <a>
+                <img src="/images/t.png" style="width: 50px;">
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Upload -->
+  <div id="demoUpload" class="modal">
+    <div class="container">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s12 center">
+            <h5>Select file</h5>
+            <form action="#">
+              <div class="file-field input-field">
+                <div class="btn">
+                  <span>File</span>
+                  <input type="file">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Song list -->
+  <!-- <div class="container">
+    <div class="row">
+      <div class="main-container">
+        <div class="main-container-items col s12 m6 l6 hoverable z-depth-1" style="
+        padding-left: 0px;
+        padding-right: 0px;
+        ">
+        <div class="item-info col s8">
+          <p><span style="font-weight: bold;">After All</span> </p>
+          <p><span style="font-weight: bold;">ERIK st. 319</span> </p>
+        </div>
+        <div class="item-btn col s4 aligner">
+          <i class="medium material-icons">play_arrow</i>
+        </div>
+      </div>
 
+      <div class="main-container-items col s12 m6 l6 hoverable z-depth-1" style="
+      padding-left: 0px;
+      padding-right: 0px;
+      ">
+      <div class="item-info col s8">
+        <p><span style="font-weight: bold;">Winter</span> </p>
+        <p><span style="font-weight: bold;">ERIK sr. 319</span> </p>
+      </div>
+      <div class="item-btn col s4 aligner">
+        <i class="medium material-icons">play_arrow</i>
+      </div>
+    </div>
+
+  </div> 
+
+</div>
+</div> -->
+  <!-- Main-page -->
+  <header>
+    <div class="slider" style="z-index: -1">
+      <ul class="slides">
+        <li>
+          <img src="images/b2.jpeg">
+          <div class="caption center-align">
+            <h3 style="font-family: entangled;">" YOU CAN'T HEAR ALL THE MUSIC ! "</h3>
+            <h5 style="font-family: entangled;" class="light grey-text text-lighten-3">Dr. Dre</h5>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <section>
+    <!-- Song list -->
+    <div class="container">
+      <div class="row">
+        <div class="main-container">
+          <div class="main-container-items col s12 m6 l6 hoverable z-depth-1" style="
+        padding-left: 0px;
+        padding-right: 0px;
+        ">
+            <div class="item-info col s8">
+              <p><span style="font-weight: bold;">After All</span> </p>
+              <p><span style="font-weight: bold;">ERIK st. 319</span> </p>
+            </div>
+            <div class="item-btn col s4 aligner">
+              <a>
+                <i class="material-icons" style="font-size: 35px; margin-right: 30px;">play_arrow</i>
+              </a>
+              <a>
+                <i class="material-icons" style="font-size: 35px;">mic</i>
+              </a>
+            </div>
+          </div>
+          <div class="main-container-items col s12 m6 l6 hoverable z-depth-1" style="
+        padding-left: 0px;
+        padding-right: 0px;
+        ">
+            <div class="item-info col s8">
+              <p><span style="font-weight: bold;">IN THE END</span> </p>
+              <p><span>Linkin Park</span> </p>
+            </div>
+            <div class="item-btn col s4 aligner">
+              <a>
+                <i class="material-icons" style="font-size: 35px; margin-right: 30px;">play_arrow</i>
+              </a>
+              <a>
+                <i class="material-icons" style="font-size: 35px;">mic</i>
+              </a>
+            </div>
+          </div>
+          <div class="main-container-items col s12 m6 l6 hoverable z-depth-1" style="
+        padding-left: 0px;
+        padding-right: 0px;
+        ">
+            <div class="item-info col s8">
+              <p><span style="font-weight: bold;">WHENEVER YOU ARE</span> </p>
+              <p><span>One Ok Rock</span> </p>
+            </div>
+            <div class="item-btn col s4 aligner">
+              <a>
+                <i class="material-icons" style="font-size: 35px; margin-right: 30px;">play_arrow</i>
+              </a>
+              <a>
+                <i class="material-icons" style="font-size: 35px;">mic</i>
+              </a>
+            </div>
+          </div>
+          <div class="main-container-items col s12 m6 l6 hoverable z-depth-1" style="
+        padding-left: 0px;
+        padding-right: 0px;
+        ">
+            <div class="item-info col s8">
+              <p><span style="font-weight: bold;">MOONSOON</span> </p>
+              <p><span>Tokio Hotel</span> </p>
+            </div>
+            <div class="item-btn col s4 aligner">
+              <a>
+                <i class="material-icons" style="font-size: 35px; margin-right: 30px;">play_arrow</i>
+              </a>
+              <a>
+                <i class="material-icons" style="font-size: 35px;">mic</i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.slider').slider({
+    indicators: false
+  });
+});
+</script>
 </html>
