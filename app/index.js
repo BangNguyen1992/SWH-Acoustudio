@@ -56,5 +56,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: "/uploadFile",
       templateUrl: "/views/uploadFile.html",
       controller: "UploadFileCtrl"
+    })
+    .state("combineRecord", {
+      url: "/recordPage/:songId",
+      templateUrl: "/views/combineRecord.html",
+      controller: "CombineRecordCtrl"
     });
 });

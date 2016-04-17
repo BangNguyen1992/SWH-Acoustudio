@@ -4,7 +4,8 @@ var module = angular.module("controllersModule", []);
 
 module
   .controller("RecordPageCtrl", RecordPageCtrl)
-  .controller("UploadFileCtrl", UploadFileCtrl);
+  .controller("UploadFileCtrl", UploadFileCtrl)
+  .controller("CombineRecordCtrl", CombineRecordCtrl);
 
 function RecordPageCtrl($scope, $window, Record) {
   var vm = this;
@@ -21,6 +22,41 @@ function RecordPageCtrl($scope, $window, Record) {
     };
     Record.save(recordObject, function(res) {
       console.log(res);
+    }, function(err) {
+      alert(err);
+    });
+  }
+}
+
+function CombineRecordCtrl($scope, $window, Record, $stateParams) {
+  var vm = this;
+  var songId = $stateParams.songId;
+  vm.saveToServer = saveToServer;
+
+  function saveToServer(blobUrl) {
+    var base64 = blobUrl.split(',')[1];
+    var recordObject = {
+      "song": {
+        "category": "test2",
+        "description": "A very delicous test2",
+        "blob": base64
+      }
+    };
+    Record.save(recordObject, function(res) {
+      console.log(res);
+      if(!res.song._id){
+        alert("Song not saved!");
+        return;
+      }
+      Record.combine({
+        instrument: res.song._id,
+        vocal: songId,
+        description: "Great22"
+      }, function(res){
+        console.log(res);
+      }, function(err){
+        console.log(res);
+      })
     }, function(err) {
       alert(err);
     });
